@@ -1,0 +1,74 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dvInput{
+    padding: 50px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputText{
+    border: 1px solid #aca9a9;
+    width: 40%;
+    height: 40px;
+    padding: 0px 15px 0px;
+    outline: none;
+    font-size: 20px;
+}
+
+.bttAdd{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(81, 106, 245);
+    color: #fff;
+    cursor: pointer;
+}
+
+.bttAdd:hover{
+    background-color: rgb(58, 86, 245);
+}
+
+.listaTarefas li{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px auto;
+    padding: 10px;
+    background-color: #e9ebf5;
+    color: #363636;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.listaTarefas li.tarefa-feita{
+    background-color: #f3f573;
+}
+
+.listaTarefas li button{
+    width: 30px;
+    height: 30px;
+    color: #ebebeb;
+    border-radius: 100px;
+    cursor: pointer;
+    margin: 0px 2px;
+}
+
+.listaTarefas li button:first-child{
+    background-color: #6adf47;
+}
+
+.listaTarefas li button:last-child{
+    background-color: #df4747;
+}
+
+.listaTarefas li button:last-child:hover{
+    background-color: #b82a2a;
+}
+.listaTarefas li button:first-child:hover{
+    background-color: #53ad37;
+}
