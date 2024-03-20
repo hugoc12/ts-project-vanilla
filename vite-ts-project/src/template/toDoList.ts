@@ -24,6 +24,9 @@ export default class Home implements home{
         list.tarefas.forEach((el)=>{
             let li = document.createElement('li');
             li.setAttribute('id', el.id);
+            if(el.status){
+                li.setAttribute('class', 'tarefa-feita');
+            }
 
             let span = document.createElement('span');
             span.innerHTML = el.text;
@@ -40,6 +43,25 @@ export default class Home implements home{
             li.appendChild(div);
 
             Home.instace._ul.appendChild(li);
+
+            btt1.addEventListener('click', ()=>{
+                if(el.status){
+                    el.status = false;
+                }else{
+                    el.status = true;
+                }
+                list.save(list.tarefas);
+                Home.instace.clear();
+                Home.instace.render(list);
+            })
+
+            btt2.addEventListener('click', ()=>{
+                list.del(el.id);
+                list.save(list.tarefas);
+                Home.instace.clear();
+                Home.instace.render(list);
+            })
+
         })
     }
 }
